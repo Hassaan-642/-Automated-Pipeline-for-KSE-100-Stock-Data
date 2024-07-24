@@ -1306,32 +1306,7 @@ select * from historical_data_youw;
 
 
 
-CREATE TABLE company_info (
-    company_information VARCHAR(255),
-    dividend_ratio FLOAT,
-    liquidity_ratio FLOAT,
-    profitability_ratio FLOAT,
-    solvency_ratio FLOAT,
-    free_float_of_shares INT,
-    stock_name VARCHAR(255),
-    FOREIGN KEY (stock_name) REFERENCES historical_data(stock_name)
-);
-CREATE TABLE predicted_data (
-    stock_name VARCHAR(255),
-    timestamp DATE,
-    close FLOAT,
-    FOREIGN KEY (stock_name) REFERENCES historical_data(stock_name)
-);
-CREATE TABLE recommendation_data (
-    sentiment_analysis_score FLOAT,
-    sma FLOAT,
-    ema FLOAT,
-    rsi FLOAT,
-    macd FLOAT,
-    volume_analysis FLOAT,
-    stock_name VARCHAR(255),
-    FOREIGN KEY (stock_name) REFERENCES historical_data(stock_name)
-);
+
 
 
 
